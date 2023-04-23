@@ -31,6 +31,7 @@ body {
     color: var(--text-color);
     background: var(--bg-color);
 }
+
 header {
     width: 100%;
     height: 80px;
@@ -42,16 +43,20 @@ header {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
+
 .logo img{
     height: 50px;
     display: block;
 }
+
 #menu-icon {
     display: none;
 }
+
 .nav-bar ul {
     display: flex;
 }
+
 .nav-bar ul li a {
     display: block;
     color: var(--text-color);
@@ -61,12 +66,88 @@ header {
     transition: 0.2s;
     margin: 0 5px;
 }
+
 .nav-bar ul li a:hover {
     color: var(--bg-color);
     background: var(--main-color);
 }
+
+
 .nav-bar ul li a.active {
     color: var(--bg-color);
+    background: var(--main-color);
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 2.5rem;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    text-shadow: 0.3rem .5rem rgba(0, 0, 0, 0.1);
+}
+
+.home .content p{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--bg-color);
+    padding: .8rem 3rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+.home .video-container video{
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .controls {
+    padding: .5rem;
+    border-radius: 5rem;
+    background: var(--text-color);
+    position: relative;
+    top: 6rem;
+}
+
+.home .controls .vid-btn {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 .3rem;
+}
+
+.home .controls .vid-btn.active  {
     background: var(--main-color);
 }
 
