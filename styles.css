@@ -29,7 +29,7 @@ html {
 
 body {
     color: var(--text-color);
-    background: var(--bg-color);
+    background:rgb(249, 249, 249);
     padding-top: 70px;
 }
 
@@ -214,6 +214,63 @@ header {
    transform: scale(1.02); 
 }
 
+footer {
+    bottom: 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1rem;
+    background: rgb(240, 240, 240);
+    box-sizing: border-box;
+    text-align: left;
+    padding: 30px 50px 40px 50px;
+    margin-top: 30px;
+}
+
+.footer-left h3 {
+    color: var(--main-color);
+    margin-bottom: .4rem;
+}
+
+.footer-left a {
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.footer-company-name {
+    padding-top: 8px;
+    font-size: 11px;
+}
+
+.footer .footer-center p {
+    display: inline-block;
+    margin: .4rem;
+}
+
+.footer-center p, a {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.footer-left a:hover,.footer-center a:hover, .footer-right a:hover{
+    color: var(--main-color);
+}
+
+.footer-company {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.footer-company span {
+    font-size: 14px;
+}
+
+.footer-icons a{
+    font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 1320px) {
     header {
         padding: 0 50px;
@@ -259,4 +316,8 @@ header {
     .nav-bar ul li a {
         margin-bottom: 12px;
     }  
+    footer {
+        position: static;
+    }
+
 }
