@@ -30,11 +30,12 @@ html {
 body {
     color: var(--text-color);
     background: var(--bg-color);
+    padding-top: 70px;
 }
 
 header {
     width: 100%;
-    height: 80px;
+    height: 70px;
     background: var(--bg-color);
     display: flex;
     align-items: center;
@@ -42,6 +43,13 @@ header {
     padding: 0 100px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-nav-bar { 
+    position: fixed; 
+    top: 0; left: 0; 
+    z-index: 9999; width: 100%; 
+    height: 70px; 
 }
 
 .logo img{
@@ -60,8 +68,8 @@ header {
 .nav-bar ul li a {
     display: block;
     color: var(--text-color);
-    font-size: 20px;
-    padding: 10px 25px;
+    font-size: 18px;
+    padding: 9px 22px;
     border-radius: 50px;
     transition: 0.2s;
     margin: 0 5px;
@@ -71,7 +79,6 @@ header {
     color: var(--bg-color);
     background: var(--main-color);
 }
-
 
 .nav-bar ul li a.active {
     color: var(--bg-color);
@@ -109,7 +116,7 @@ header {
     display: inline-block;
     margin-top: 1rem;
     color: var(--bg-color);
-    padding: .8rem 3rem;
+    padding: .6rem 2rem;
     border: .2rem solid var(--main-color);
     border-radius: 50px;
     cursor: pointer;
@@ -151,6 +158,62 @@ header {
     background: var(--main-color);
 }
 
+.sub-home {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    align-items: left;
+    justify-content: center;
+    z-index: 1;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    
+}
+
+.sub-home-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.row {
+    transition: all .38s ease;
+}
+
+.sub-home-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.row p{
+    color: rgb(104, 103, 103);
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.main-text p {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.row:hover {
+   transform: scale(1.02); 
+}
+
 @media only screen and (max-width: 1320px) {
     header {
         padding: 0 50px;
@@ -180,6 +243,7 @@ header {
     }
     .nav-bar.active {
         height: 450px;
+        z-index: 1;  
     }
     .nav-bar ul {
         display: block;
@@ -194,5 +258,5 @@ header {
     }
     .nav-bar ul li a {
         margin-bottom: 12px;
-    }
+    }  
 }
