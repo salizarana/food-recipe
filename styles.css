@@ -282,6 +282,9 @@ header {
     color: var(--text-color);
 }
 
+.recipe-text, .gallery-text{
+    text-align: center;
+}
 footer {
     bottom: 0;
 }
