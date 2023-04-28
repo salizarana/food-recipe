@@ -359,6 +359,14 @@ header {
     border: 2px solid #0d84c990;
 }
 
+.field-group.success input {
+    border-color: green;
+}
+
+.field-group.error input ,.field-group.error textarea{
+    border-color: red;
+}
+
 .field-group label {
     display: inline;
     padding: 2px 0px;
@@ -413,6 +421,13 @@ lottie-player {
 
 .contact-info-items p {
     font-size: 15px;
+}
+
+.field-group .error {
+    display: block;
+    color: red;
+    font-size: 15px;
+    font-style: italic;
 }
 
 footer {

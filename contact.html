@@ -38,20 +38,23 @@
                     <div class="contact-title xs-screen">
                         <h3>Get in Touch</h3>
                     </div>
-                    <form action="" class="contact-form">
+                    <form action="" method="POST" class="form" id="form" name="form">
                         <div class="field-group">
                             <label for="fname">Full Name</label>
                             <input type="text" value="" id="fname" name="fname" placeholder="Your Name">
+                            <span class="error"></span>
                         </div>
                         <div class="field-group">
                             <label for="email">Email</label>
                             <input type="text" value="" id="email" name="email" placeholder="Your Email">
+                            <span class="error"></span>
                         </div>
                         <div class="field-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Your Name"></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+                            <span class="error"></span>
                         </div>
-                        <button class="form-submit">Submit</button>
+                        <button type="submit" name="submit" class="form-submit">Submit</button>
                     </form>
                 </div>
                 <div class="container-col">
