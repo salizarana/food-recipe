@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; 
     scroll-behavior: smooth;
-    list-style: none;
+    /* list-style: none; */
     text-decoration: none;
 }
 
@@ -63,6 +63,7 @@ header {
 
 .nav-bar ul {
     display: flex;
+    list-style: none;
 }
 
 .nav-bar ul li a {
@@ -430,6 +431,74 @@ lottie-player {
     font-style: italic;
 }
 
+.article {
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content:center;
+    flex-flow: column;
+    min-height: 100vh;
+    margin: 2rem 3rem 0 3rem;
+    z-index: 1;
+}
+
+.path ul{
+    display: flex;
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.path ul li a, .path ul span{
+    display: block;
+    color: var(--text-color);
+    font-size: 15px;
+    padding: 9px 3px;
+    transition: 0.2s;
+}
+
+.path ul .prev a:hover{
+    text-decoration: underline;
+}
+
+.path ul .current a.current {
+    font-weight:600;
+}
+
+.article-content img {
+    height: auto;
+    width: 42%;
+    margin: 1rem 0 1rem 0;
+    border-radius: 2%;
+}
+
+.article-content{
+    margin-left: 1rem;
+    text-align: justify;
+}
+
+.article-content h2 {
+    color: var(--main-color);
+    font-size: 40px;
+}
+
+.article-content .text, .article-content li {
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.method {
+    margin-top: 1rem;
+}
+
+.method ol {
+    margin-left: 1rem;
+}
+
+.article .date{
+    padding-top: 5px;
+    font-size: 10px;
+}
+
 footer {
     bottom: 0;
 }
@@ -496,6 +565,10 @@ footer {
     header {
         padding: 0 30px;
     }
+    .article-content img {
+        height: auto;
+        width: 70%;
+    }
 }
 @media only screen and (max-width: 850px) {
     #menu-icon {
@@ -541,6 +614,10 @@ footer {
     footer {
         position: static;
     }
+    .article-content img {
+        height: auto;
+        width: 70%;
+    }
 }
 @media only screen and (max-width: 680px) {
     .contact {
@@ -564,5 +641,9 @@ footer {
     }
     .xs-screen {
         display: none;
+    }
+    .article-content img {
+        height: auto;
+        width: 100%;
     }
 }
