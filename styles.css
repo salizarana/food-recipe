@@ -16,11 +16,6 @@
     --p-font: 0.9rem;
 }
 
-*::selection {
-    background: var(--main-color);
-    color: #fff;
-}
-
 html {
     overflow-x: hidden;
     
