@@ -90,12 +90,15 @@ const validateInputs = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  const submitBtn = document.getElementById("read-more");
-  if (submitBtn) {
-    submitBtn.addEventListener("click", function () {
-      gtag("event", "recipes_click", {
+  const readMoreBtn = document.getElementById("read-more");
+
+  if (readMoreBtn) {
+    readMoreBtn.addEventListener("click", function () {
+      console.log("Read more clicked");
+
+      gtag("event", "read_more", {
         event_category: "interaction",
-        event_label: "Recipes Button",
+        event_label: "Read More Button",
         value: 1,
       });
     });
